@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- 加入這行就能正常顯示中文 -->
+  <meta charset="UTF-8">
   <style>
-    body { width: 250px; padding: 10px; font-family: sans-serif; }
-    textarea { width: 100%; height: 80px; margin-bottom: 10px; }
+    body { 
+      margin: 0; 
+      padding: 10px; 
+      display: flex; 
+      flex-direction: column; 
+      height: 100vh; /* 全高 */
+      box-sizing: border-box;
+    }
+    textarea { 
+      flex-grow: 1; /* 讓輸入框自動填滿剩餘空間 */
+      width: 100%; 
+      resize: none; 
+    }
   </style>
 </head>
 <body>
-  <h3>請輸入內容：</h3>
-  <textarea id="userInput" placeholder="在此輸入文字..."></textarea>
-  <button id="saveBtn">儲存</button>
+  <textarea id="userInput" placeholder="隨手記點什麼..."></textarea>
+  <div class="status">內容將自動同步儲存</div>
   <script src="popup.js"></script>
 </body>
 </html>

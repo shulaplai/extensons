@@ -3,8 +3,11 @@
   "description": "Input Popup",
   "version": "1.0",
   "manifest_version": 3,
+  "permissions": ["sidePanel", "storage"],
+  "side_panel": {
+    "default_path": "popup.html"
+  },
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": "hello_extensions.png"
+    "default_title": "開啟側邊欄"
   }
 }
